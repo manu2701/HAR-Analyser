@@ -1,0 +1,84 @@
+.page {
+  padding: var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.header { margin-bottom: var(--space-6); }
+.title { font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-1); }
+.subtitle { font-size: var(--text-sm); color: var(--text-secondary); }
+
+.compareGrid {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.uploadZone {
+  border: 2px dashed var(--border-accent);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  background: rgba(17, 24, 39, 0.5);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.uploadZone:hover {
+  border-color: var(--primary-400);
+  background: rgba(6, 182, 212, 0.05);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.zoneIcon { font-size: 2.5rem; margin-bottom: var(--space-3); opacity: 0.6; }
+.zoneLabel {
+  font-size: var(--text-base); font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-1);
+}
+.zoneSubLabel { font-size: var(--text-sm); color: var(--text-tertiary); }
+
+.vsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+.vsBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-tertiary);
+}
+
+.diffPlaceholder {
+  margin-top: var(--space-8);
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  text-align: center;
+}
+
+.diffIcon { font-size: 2.5rem; margin-bottom: var(--space-3); opacity: 0.4; }
+.diffTitle { font-size: var(--text-lg); font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-2); }
+.diffDesc { font-size: var(--text-sm); color: var(--text-tertiary); max-width: 500px; margin: 0 auto; }
+
+@media (max-width: 768px) {
+  .compareGrid {
+    grid-template-columns: 1fr;
+  }
+  .vsSection {
+    min-height: auto;
+    padding: var(--space-4);
+  }
+}

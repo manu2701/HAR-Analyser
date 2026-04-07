@@ -1,0 +1,46 @@
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+/* Padding variants */
+.paddingSm {
+  padding: var(--space-3);
+}
+
+.paddingMd {
+  padding: var(--space-5);
+}
+
+.paddingLg {
+  padding: var(--space-8);
+}
+
+.paddingNone {
+  padding: 0;
+}
+
+/* Hover */
+.hover:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-1px);
+}
+
+/* Glow */
+.glow {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+/* Clickable */
+.card[role='button'] {
+  cursor: pointer;
+}
+
+.card[role='button']:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
